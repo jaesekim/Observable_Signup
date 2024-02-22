@@ -19,6 +19,7 @@
 		7B5ACD702B8737F900825C15 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7B5ACD6F2B8737F900825C15 /* SnapKit */; };
 		7B5ACD722B873FC200825C15 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5ACD712B873FC200825C15 /* Observable.swift */; };
 		7B5ACD752B87417700825C15 /* SignUpViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5ACD742B87417700825C15 /* SignUpViewController+Extension.swift */; };
+		7B5ACD782B87A2A900825C15 /* TextWithColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5ACD772B87A2A900825C15 /* TextWithColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7B5ACD6A2B87343100825C15 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7B5ACD712B873FC200825C15 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		7B5ACD742B87417700825C15 /* SignUpViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Extension.swift"; sourceTree = "<group>"; };
+		7B5ACD772B87A2A900825C15 /* TextWithColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		7B5ACD4D2B87308200825C15 /* ObservableSignUP */ = {
 			isa = PBXGroup;
 			children = (
+				7B5ACD762B87A29F00825C15 /* Model */,
 				7B5ACD732B87413F00825C15 /* Extension */,
 				7B5ACD692B87341C00825C15 /* Base */,
 				7B5ACD622B87328D00825C15 /* ViewModel */,
@@ -105,6 +108,14 @@
 				7B5ACD742B87417700825C15 /* SignUpViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7B5ACD762B87A29F00825C15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B5ACD772B87A2A900825C15 /* TextWithColor.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				7B5ACD642B8732C000825C15 /* SignUpViewModel.swift in Sources */,
 				7B5ACD722B873FC200825C15 /* Observable.swift in Sources */,
 				7B5ACD4F2B87308200825C15 /* AppDelegate.swift in Sources */,
+				7B5ACD782B87A2A900825C15 /* TextWithColor.swift in Sources */,
 				7B5ACD512B87308200825C15 /* SceneDelegate.swift in Sources */,
 				7B5ACD6B2B87343200825C15 /* BaseViewController.swift in Sources */,
 			);

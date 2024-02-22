@@ -16,6 +16,12 @@ class SignUpViewModel {
     var outputIdText = Observable("")
     var outputPasswordText = Observable("")
     var outputConfirmPasswordText = Observable("")
+    
+    var outputIdTextColor = Observable("")
+    var outputPasswordTextColor = Observable("")
+    var outputConfirmPasswordTextColor = Observable("")
+    
+    var buttonColor = Observable("")
 
     init() {
         inputIdText.bind { value in
@@ -35,31 +41,59 @@ class SignUpViewModel {
     private func idValidation(_ inputIdText: String) {
 
         // 길이
-        if inputIdText.count < 4 || inputIdText.count > 12 {
-            outputIdText.text = "4 ~ 12자 사이의 id를 입력해 주세요"
-            outputIdText.outputTextColor = "systemRed"
+        if inputIdText.isEmpty {
+            outputIdText.value = "아이디를 입력해 주세요"
+            outputIdTextColor.value = "black"
+        } else if inputIdText.count < 4 || inputIdText.count > 12 {
+            outputIdText.value = "4 ~ 12자 사이의 id를 입력해 주세요"
+            outputIdTextColor.value = "systemRed"
         } else {
-            outputIdText.text = "사용가능한 id입니다!"
-            outputIdText.outputTextColor = "systemGreen"
+            outputIdText.value = "사용가능한 id입니다!"
+            outputIdTextColor.value = "systemGreen"
+        }
+        
+        if outputIdTextColor.value == "systemGreen" && outputPasswordTextColor.value == "systemGreen" && outputConfirmPasswordTextColor.value == "systemGreen" {
+            buttonColor.value = "systemGreen"
+        } else {
+            buttonColor.value = ""
         }
     }
 
     private func passwordValidation(_ inputPasswordText: String) {
-        print("password validation enter")
-        if inputPasswordText.count < 4 || inputPasswordText.count > 16 {
-            outputPasswordText.text = "4 ~ 16자 사이의 비밀번호를 입력해 주세요"
+        if inputPasswordText.isEmpty {
+            outputPasswordText.value = "비밀번호를 입력해 주세요"
+            outputPasswordTextColor.value = "black"
+        } else if inputPasswordText.count < 4 || inputPasswordText.count > 16 {
+            outputPasswordText.value = "4 ~ 16자 사이의 비밀번호를 입력해 주세요"
+            outputPasswordTextColor.value = "systemRed"
         } else {
-            outputPasswordText.text = "사용가능한 비밀번호입니다!"
+            outputPasswordText.value = "사용가능한 비밀번호입니다!"
+            outputPasswordTextColor.value = "systemGreen"
+        }
+        
+        if outputIdTextColor.value == "systemGreen" && outputPasswordTextColor.value == "systemGreen" && outputConfirmPasswordTextColor.value == "systemGreen" {
+            buttonColor.value = "systemGreen"
+        } else {
+            buttonColor.value = ""
         }
     }
 
     private func confirmPasswordValidation(_ inputConfirmPasswordText: String) {
         if inputConfirmPasswordText.isEmpty {
-            outputConfirmPasswordText.text = "비밀번호를 다시 입력해 주세요"
-        } else if inputConfirmPasswordText != inputPasswordText.text {
-            outputConfirmPasswordText.text = "비밀번호가 일치하지 않습니다"
+            outputConfirmPasswordText.value = "비밀번호를 다시 입력해 주세요"
+            outputConfirmPasswordTextColor.value = "black"
+        } else if inputConfirmPasswordText != inputPasswordText.value {
+            outputConfirmPasswordText.value = "비밀번호가 일치하지 않습니다"
+            outputConfirmPasswordTextColor.value = "systemRed"
         } else {
-            outputConfirmPasswordText.text = "비밀번호가 일치합니다!"
+            outputConfirmPasswordText.value = "비밀번호가 일치합니다!"
+            outputConfirmPasswordTextColor.value = "systemGreen"
+        }
+        
+        if outputIdTextColor.value == "systemGreen" && outputPasswordTextColor.value == "systemGreen" && outputConfirmPasswordTextColor.value == "systemGreen" {
+            buttonColor.value = "systemGreen"
+        } else {
+            buttonColor.value = ""
         }
     }
 }

@@ -11,20 +11,18 @@ class Observable {
     
     private var closure: ((String) -> Void)?
 
-    var text: String {
+    var value: String {
         didSet {
-            closure?(text)
+            closure?(value)
         }
     }
 
-    var outputTextColor: String?
-
-    init(_ text: String) {
-        self.text = text
+    init(_ value: String) {
+        self.value = value
     }
     
     func bind(_ closure: @escaping (String) -> Void) {
-        closure(text)
+        closure(value)
         self.closure = closure
     }
     

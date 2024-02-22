@@ -5,6 +5,7 @@
 //  Created by 김재석 on 2/22/24.
 //
 
+
 import UIKit
 import SnapKit
 
@@ -98,12 +99,50 @@ class SignUpViewController: BaseViewController {
             self.idGuideLabel.text = value
         }
         
+        viewModel.outputIdTextColor.bind { value in
+            if value == "black" {
+                self.idGuideLabel.textColor = .black
+            } else if value == "systemRed" {
+                self.idGuideLabel.textColor = .systemRed
+            } else {
+                self.idGuideLabel.textColor = .systemGreen
+            }
+        }
+        
         viewModel.outputPasswordText.bind { value in
             self.passwordGuideLabel.text = value
         }
         
+        viewModel.outputPasswordTextColor.bind { value in
+            if value == "black" {
+                self.passwordGuideLabel.textColor = .black
+            } else if value == "systemRed" {
+                self.passwordGuideLabel.textColor = .systemRed
+            } else {
+                self.passwordGuideLabel.textColor = .systemGreen
+            }
+        }
+        
         viewModel.outputConfirmPasswordText.bind { value in
             self.confirmPasswordGuideLabel.text = value
+        }
+        
+        viewModel.outputConfirmPasswordTextColor.bind { value in
+            if value == "black" {
+                self.confirmPasswordGuideLabel.textColor = .black
+            } else if value == "systemRed" {
+                self.confirmPasswordGuideLabel.textColor = .systemRed
+            } else {
+                self.confirmPasswordGuideLabel.textColor = .systemGreen
+            }
+        }
+        
+        viewModel.buttonColor.bind { value in
+            if value == "systemGreen" {
+                self.signupButton.backgroundColor = .systemGreen
+            } else {
+                self.signupButton.backgroundColor = .white
+            }
         }
     }
 
