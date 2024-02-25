@@ -100,13 +100,7 @@ class SignUpViewController: BaseViewController {
         }
         
         viewModel.outputIdTextColor.bind { value in
-            if value == "black" {
-                self.idGuideLabel.textColor = .black
-            } else if value == "systemRed" {
-                self.idGuideLabel.textColor = .systemRed
-            } else {
-                self.idGuideLabel.textColor = .systemGreen
-            }
+            self.idGuideLabel.textColor = value ? .systemGreen : .systemRed
         }
         
         viewModel.outputPasswordText.bind { value in
@@ -114,13 +108,7 @@ class SignUpViewController: BaseViewController {
         }
         
         viewModel.outputPasswordTextColor.bind { value in
-            if value == "black" {
-                self.passwordGuideLabel.textColor = .black
-            } else if value == "systemRed" {
-                self.passwordGuideLabel.textColor = .systemRed
-            } else {
-                self.passwordGuideLabel.textColor = .systemGreen
-            }
+            self.passwordGuideLabel.textColor = value ? .systemGreen : .systemRed
         }
         
         viewModel.outputConfirmPasswordText.bind { value in
@@ -128,21 +116,12 @@ class SignUpViewController: BaseViewController {
         }
         
         viewModel.outputConfirmPasswordTextColor.bind { value in
-            if value == "black" {
-                self.confirmPasswordGuideLabel.textColor = .black
-            } else if value == "systemRed" {
-                self.confirmPasswordGuideLabel.textColor = .systemRed
-            } else {
-                self.confirmPasswordGuideLabel.textColor = .systemGreen
-            }
+            self.confirmPasswordGuideLabel.textColor = value ? .systemGreen : .systemRed
         }
         
         viewModel.buttonColor.bind { value in
-            if value == "systemGreen" {
-                self.signupButton.backgroundColor = .systemGreen
-            } else {
-                self.signupButton.backgroundColor = .white
-            }
+            self.signupButton.backgroundColor = value ? .systemGreen : .white
+            
         }
     }
 
