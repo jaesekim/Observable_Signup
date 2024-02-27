@@ -22,6 +22,10 @@
 		7BC28CBA2B88906600B90E49 /* MVVMSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC28CB92B88906600B90E49 /* MVVMSignupViewController.swift */; };
 		7BC28CBC2B8890FA00B90E49 /* MVVMSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC28CBB2B8890FA00B90E49 /* MVVMSignupViewModel.swift */; };
 		7BC28CBE2B88AFF800B90E49 /* MVVMObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC28CBD2B88AFF800B90E49 /* MVVMObservable.swift */; };
+		7BC28CE92B8D36CA00B90E49 /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC28CE82B8D36CA00B90E49 /* NetworkViewModel.swift */; };
+		7BC28CEC2B8D375B00B90E49 /* CoinMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC28CEB2B8D375B00B90E49 /* CoinMarket.swift */; };
+		7BC28CEF2B8D37AE00B90E49 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7BC28CEE2B8D37AE00B90E49 /* Alamofire */; };
+		7BC28CF12B8D381400B90E49 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC28CF02B8D381400B90E49 /* CoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,9 @@
 		7BC28CB92B88906600B90E49 /* MVVMSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSignupViewController.swift; sourceTree = "<group>"; };
 		7BC28CBB2B8890FA00B90E49 /* MVVMSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSignupViewModel.swift; sourceTree = "<group>"; };
 		7BC28CBD2B88AFF800B90E49 /* MVVMObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMObservable.swift; sourceTree = "<group>"; };
+		7BC28CE82B8D36CA00B90E49 /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
+		7BC28CEB2B8D375B00B90E49 /* CoinMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarket.swift; sourceTree = "<group>"; };
+		7BC28CF02B8D381400B90E49 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC28CEF2B8D37AE00B90E49 /* Alamofire in Frameworks */,
 				7B5ACD6E2B8737C800825C15 /* SnapKit in Frameworks */,
 				7B5ACD702B8737F900825C15 /* SnapKit in Frameworks */,
 			);
@@ -74,6 +82,7 @@
 		7B5ACD4D2B87308200825C15 /* ObservableSignUP */ = {
 			isa = PBXGroup;
 			children = (
+				7BC28CEA2B8D36E500B90E49 /* Model */,
 				7B5ACD732B87413F00825C15 /* Extension */,
 				7B5ACD692B87341C00825C15 /* Base */,
 				7B5ACD622B87328D00825C15 /* ViewModel */,
@@ -87,6 +96,7 @@
 				7B5ACD5C2B87308500825C15 /* Info.plist */,
 				7BC28CB92B88906600B90E49 /* MVVMSignupViewController.swift */,
 				7BC28CBD2B88AFF800B90E49 /* MVVMObservable.swift */,
+				7BC28CF02B8D381400B90E49 /* CoinViewController.swift */,
 			);
 			path = ObservableSignUP;
 			sourceTree = "<group>";
@@ -96,6 +106,7 @@
 			children = (
 				7B5ACD632B8732C000825C15 /* SignUpViewModel.swift */,
 				7BC28CBB2B8890FA00B90E49 /* MVVMSignupViewModel.swift */,
+				7BC28CE82B8D36CA00B90E49 /* NetworkViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -114,6 +125,14 @@
 				7B5ACD742B87417700825C15 /* SignUpViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7BC28CEA2B8D36E500B90E49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BC28CEB2B8D375B00B90E49 /* CoinMarket.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +154,7 @@
 			packageProductDependencies = (
 				7B5ACD6D2B8737C800825C15 /* SnapKit */,
 				7B5ACD6F2B8737F900825C15 /* SnapKit */,
+				7BC28CEE2B8D37AE00B90E49 /* Alamofire */,
 			);
 			productName = ObservableSignUP;
 			productReference = 7B5ACD4B2B87308200825C15 /* ObservableSignUP.app */;
@@ -166,6 +186,7 @@
 			mainGroup = 7B5ACD422B87308200825C15;
 			packageReferences = (
 				7B5ACD6C2B8737C800825C15 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7BC28CED2B8D37AE00B90E49 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7B5ACD4C2B87308200825C15 /* Products */;
 			projectDirPath = "";
@@ -194,10 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC28CEC2B8D375B00B90E49 /* CoinMarket.swift in Sources */,
 				7BC28CBA2B88906600B90E49 /* MVVMSignupViewController.swift in Sources */,
 				7B5ACD682B8733F800825C15 /* SignUpViewController.swift in Sources */,
+				7BC28CE92B8D36CA00B90E49 /* NetworkViewModel.swift in Sources */,
 				7BC28CBC2B8890FA00B90E49 /* MVVMSignupViewModel.swift in Sources */,
 				7B5ACD752B87417700825C15 /* SignUpViewController+Extension.swift in Sources */,
+				7BC28CF12B8D381400B90E49 /* CoinViewController.swift in Sources */,
 				7BC28CBE2B88AFF800B90E49 /* MVVMObservable.swift in Sources */,
 				7B5ACD642B8732C000825C15 /* SignUpViewModel.swift in Sources */,
 				7B5ACD722B873FC200825C15 /* Observable.swift in Sources */,
@@ -434,6 +458,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		7BC28CED2B8D37AE00B90E49 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -446,6 +478,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B5ACD6C2B8737C800825C15 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		7BC28CEE2B8D37AE00B90E49 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BC28CED2B8D37AE00B90E49 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
